@@ -1,0 +1,38 @@
+[	{
+		"label": "Acumulado 2023",
+		"sales": 25000.00,
+		"amount": 1750
+	},
+	{
+		"label": "Acumulado 2022",
+		"sales": 22500.00,
+		"amount": 1560
+	},
+	{
+		"label": "Acumulado 2021",
+		"sales": 19000.00,
+		"amount": 1430
+	},
+	{
+		"label": "Acumulado 2020",
+		"sales": 22000.00,
+		"amount": 1123
+	},
+	{
+		"label": "Acumulado 2019",
+		"sales": 1500.00,
+		"amount": 930
+	},
+	{
+		"label": "Acumulado 2018",
+		"sales": 22000.00,
+		"amount": 750
+	},
+	{
+		"label": "Acumulado 2017",
+		"sales": 1500.00,
+		"amount": 540
+	}
+
+]
+

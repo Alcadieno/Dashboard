@@ -1,0 +1,220 @@
+/* Estilos CSS do dashboard */
+[data-theme="light"] {
+	--clr-background:#F5F5F5;
+	--clr-font:#111111;
+    --clr-card:#FEE7E7;
+    --clr-switch-track:#AABBCC;
+    --clr-link:#3333FF;
+
+    --clr-confirmed:#D21212;
+    --clr-deaths:#223344;
+    --clr-vaccinated-1:#0000C7;
+    --clr-vaccinated-2:#117711;
+
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 2.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+[data-theme="dark"] {
+	--clr-background:#111111;
+	--clr-font:#F5F5F5;
+    --clr-card:#1A1A1A;
+    --clr-switch-track:#AABBCC;
+    --clr-link:#C2C2FF;
+
+    --clr-confirmed:#FF3333;
+    --clr-deaths:#AABBCC;
+    --clr-vaccinated-1:#6666DD;
+    --clr-vaccinated-2:#44BB44;
+    
+	--ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 2.6rem/1.4 var(--ff);
+    --ts-normal-semibold: 600 1.6rem/1.4 var(--ff);
+
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(221, 221, 221, 5%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #233565;
+    background-color: #FFFFFF;
+    transition: var(--transition);
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    font-size: 2.1rem;
+    font:var(--ts-normal-semibold);
+  }
+  h1 {
+    text-align: center;
+    ;
+    
+  }
+  .chart {
+    height: 300px;
+    margin-top: 20px;
+  }
+  canvas{
+    border: 1px solid gainsboro;
+    background: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+html{
+    font-size: 62.5%;
+    font-family: var(--ff);
+    color:var(--clr-font);
+    transition: var(--transition);
+}
+section{
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    padding: 1.6rem;
+    border-radius: 1rem;
+}
+footer{
+    background-color:#8BD8BC;
+    font:var(--ts-normal-text);
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    
+    
+}
+  .navbar{
+    background-color:#8BD8BC;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border-radius: 5px;
+    
+  }
+  .logo{
+    fill: var(--clr-font);
+    transition: var(--transition);
+    
+  }
+  .switch {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    
+  }
+  .switch__track{
+    background-color: #233565;
+    display: block;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0.5em;
+
+  }
+  .switch__track::before{
+    content: "";
+    background-color: #FFFFFF;
+    transition: var(--transition);
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    left: 0;
+  }
+  .switch__track--dark::before{
+    left: 2rem;
+  }
+  .loading{
+    position: fixed;
+    background-color: #ccc;
+    transition: var(--transition);
+    width: 100vw;
+    height: 100vh;
+    font-size: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; 
+  }
+  .loading__spinner{
+    animation: spin 2s infinite linear;
+  }
+  @keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+
+  }
+  @media screen and (min-width: 390px){
+    .container{
+        grid-template-columns: 4fr 4fr;
+    }
+    
+  }
+  @media screen and (min-width:375px) {
+    .container{
+        grid-template-columns: 4fr 4fr;
+    }
+    
+
+  }
+  .loading--hide{
+    visibility: hidden;
+    opacity: 0;
+  }
+  .status{
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+  }
+  .status__icon{
+    font-size: 3.6rem;
+    margin-right: .8;
+
+  }
+  .info{
+    font: var(--ts-caption);
+    text-transform:uppercase;
+  }
+  #statistics{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    align-self: auto;
+    background-color: #8BD8BC;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    align-items: center;
+  }
+#titulonav{
+    font-size: 3.1rem;
+    font:var(--ts-normal-semibold);
+}

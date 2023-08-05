@@ -1,0 +1,55 @@
+[{
+        "province": "SP",
+        "sales": 12000.00,
+        "amount": 500
+    },
+    {
+        "province": "ES",
+        "sales": 9050.00,
+        "amount": 300
+    },
+    {
+        "province": "RS",
+        "sales": 1000.00,
+        "amount": 350
+    },
+    {
+        "province": "SC",
+        "sales": 4000.00,
+        "amount": 600
+    },
+    {
+        "province": "BA",
+        "sales": 5500.00,
+        "amount": 430
+    },
+    {
+        "province": "SE",
+        "sales": 2100.00,
+        "amount": 200
+    },
+    {
+        "province": "MA",
+        "sales": 1500.00,
+        "amount": 200
+    },
+    {
+        "province": "AL",
+        "sales": 700.00,
+        "amount": 200
+    },
+    {
+        "province": "PA",
+        "sales": 8000.00,
+        "amount": 200
+    },
+    {
+        "province": "CE",
+        "sales": 3300.00,
+        "amount": 100
+    }
+    
+    
+   
+    
+]

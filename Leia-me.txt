@@ -1,0 +1,4 @@
+Olá , Fernando aqui,
+
+- Alterei os arquivos de json enviados , para testar a escalabilidade do gráfico
+- Todas os pacotes e bibliotecas estão no package,json (utilizei chart)
